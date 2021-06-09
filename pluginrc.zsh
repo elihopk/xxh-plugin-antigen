@@ -5,7 +5,10 @@ PLUGIN_NAME="xxh-plugin-zsh-antigen"
 
 export ADOTDIR=$CURR_DIR/antigen
 
-echo "$PLUGIN_NAME: ADOTDIR: $ADOTDIR"
+if [[ $XXH_VERBOSE == '2' ]]
+then
+    echo "$PLUGIN_NAME: ADOTDIR: $ADOTDIR"
+fi
 
 source $ADOTDIR/antigen.zsh
 
