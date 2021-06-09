@@ -10,7 +10,7 @@ then
     echo "$PLUGIN_NAME: ADOTDIR: $ADOTDIR"
 fi
 
-ln -s $CURR_DIR/../../../shells/xxh-shell-zsh/build/.zshrc $CURR_DIR/../../../../.zshrc 
+ln -s $CURR_DIR/../../../shells/xxh-shell-zsh/build/.zshrc $CURR_DIR/../../../../.zshrc 2>/dev/null
 
 source $ADOTDIR/antigen.zsh
 
