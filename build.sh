@@ -13,9 +13,11 @@ do
   esac
 done
 
+antigen_home=$build_dir/antigen
+
 rm -rf $build_dir
 mkdir -p $build_dir
-mkdir -p $build_dir/antigen
+mkdir -p $antigen_home
 
 for f in pluginrc.zsh
 do
@@ -24,7 +26,7 @@ done
 
 portable_url='https://git.io/antigen'
 
-cd $build_dir
+cd $antigen_home
 
 [ $QUIET ] && arg_q='-q' || arg_q=''
 [ $QUIET ] && arg_s='-s' || arg_s=''

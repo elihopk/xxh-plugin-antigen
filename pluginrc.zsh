@@ -7,19 +7,19 @@ export ADOTDIR=$CURR_DIR/antigen
 
 echo "$PLUGIN_NAME: ADOTDIR: $ADOTDIR"
 
-source $CURR_DIR/antigen.zsh
+source $ADOTDIR/antigen.zsh
 
 if [[ -v bundles ]]
 then
-    #if [[ $XXH_VERBOSE == '2' ]]
-    #then
+    if [[ $XXH_VERBOSE == '2' ]]
+    then
         echo "$PLUGIN_NAME: Bundles is set = $bundles"
-    #fi
+    fi
 else
-    #if [[ $XXH_VERBOSE == '2' ]]
-    #then
+    if [[ $XXH_VERBOSE == '2' ]]
+    then
         echo "$PLUGIN_NAME: Bundles not set"
-    #fi
+    fi
 fi
 
 for i in $bundles
