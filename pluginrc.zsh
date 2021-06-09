@@ -1,7 +1,7 @@
 # Antigen ZSH Plugin for XXH 
 
 CURR_DIR="$(cd "$(dirname "$0")" && pwd)"
-PLUGIN_NAME="xxh-plugin-antigen"
+PLUGIN_NAME="xxh-plugin-zsh-antigen"
 
 export ADOTDIR=$CURR_DIR/antigen
 
