@@ -27,9 +27,14 @@ else
     fi
 fi
 
+oldIFS=$IFS
+IFS=':'
+
 for i in $bundles
 do
     antigen bundle $i
 done
+
+IFS=$oldIFS
 
 antigen apply
