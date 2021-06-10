@@ -25,6 +25,7 @@ else
     if [[ $XXH_VERBOSE == '2' ]]
     then
         echo "$PLUGIN_NAME: Bundles not set"
+        break
     fi
 fi
 
