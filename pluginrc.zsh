@@ -1,6 +1,6 @@
 # Antigen ZSH Plugin for XXH 
 
-CURR_DIR="$(cd "$(dirname "$0")" && pwd)"
+CURR_DIR="$(cd "$(dirname "$0" 1>/dev/null)" && pwd)"
 PLUGIN_NAME="xxh-plugin-zsh-antigen"
 
 export ADOTDIR=$CURR_DIR/antigen
@@ -27,14 +27,15 @@ else
     fi
 fi
 
-oldIFS=$IFS
-IFS=':'
+newBundles=("${(@s/:/)bundles}")
 
-for i in $bundles
+for i in "${newBundles[@]}"
 do
+    if [[ $XXH_VERBOSE == '2' ]]
+    then
+        echo "$PLUGIN_NAME: Adding Bundle $i"
+    fi
     antigen bundle $i
 done
 
-IFS=$oldIFS
-
-antigen apply
+antigen apply 1>/dev/null
